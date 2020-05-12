@@ -9,13 +9,10 @@
 
         <Input fieldName={'name'} label={'Nombre'} />
 
-        <label for="race-field">Raza</label>
-        <input id="race-field" name="race" type="text" value=""/>
+        <Input fieldName={'race'} label={'Raza'} />
 
-        <label for="actual-career-field">Profesión actual</label>
-        <input id="actual-career-field" name="actual-career" type="text" value=""/>
+        <Input fieldName={'actual-career'} label={'Profesión actual'} />
 
-        <label for="former-career-field">Profesión anterior</label>
-        <input id="former-career-field" name="career-field" type="text" value=""/>
+        <Input fieldName={'former-career'} label={'Profesión anterior'} />
     </fieldset>
 </main>
