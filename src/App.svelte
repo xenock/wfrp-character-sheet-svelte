@@ -1,5 +1,7 @@
 <script>
-    import Input from './components/Input.svelte'
+  import NumberInput from './components/NumberInput.svelte'
+  import Input from './components/Input.svelte'
+
     const races = [
         {
             id: 1,
@@ -21,7 +23,7 @@
 
     let selectedRace
 
-
+    import { toughness, toughnessBonus } from './stores.js'
 </script>
 
 <main>
@@ -57,27 +59,14 @@
 
             <fielset>
                 <legend>Iniciales</legend>
-                <Input fieldName={'weaponSkill'} label={'HA'} />
-                <Input fieldName={'ballisticSkill'} label={'HP'} />
-                <Input fieldName={'strength'} label={'F'} />
-                <Input fieldName={'toughness'} label={'R'} />
-                <Input fieldName={'agility'} label={'Ag'} />
-                <Input fieldName={'intelligence'} label={'I'} />
-                <Input fieldName={'willPower'} label={'V'} />
-                <Input fieldName={'fellowship'} label={'Em'} />
+                <NumberInput fieldName={'toughness'} label={'R'} bind:fieldValue={$toughness} />
+
             </fielset>
         </fielset>
 
         <fielset>
             <legend>Secundarias</legend>
-            <Input fieldName={'attacks'} label={'A'} />
-            <Input fieldName={'wounds'} label={'H'} />
-            <Input fieldName={'strengthBonus'} label={'BF'} />
-            <Input fieldName={'toughnessBonus'} label={'BR'} />
-            <Input fieldName={'movement'} label={'M'} />
-            <Input fieldName={'magic'} label={'Mag'} />
-            <Input fieldName={'insanityPoints'} label={'PL'} />
-            <Input fieldName={'fatePoints'} label={'PD'} />
+            <NumberInput fieldName={'toughnessBonus'} label={'BR'} fieldValue={$toughnessBonus} />
         </fielset>
     </fieldset>
 </main>

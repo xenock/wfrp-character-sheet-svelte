@@ -1,8 +1,8 @@
 <script>
-    export let fieldName
-    export let label
-    export let fieldType = 'text'
-    export let fieldValue = ''
+  export let fieldName
+  export let label
+  export let fieldType = 'text'
+  export let fieldValue = ''
 </script>
 
 <label for="{fieldName}-field">{label}</label>
