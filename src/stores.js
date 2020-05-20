@@ -14,7 +14,7 @@ export const fellowship = writable(0)
 
 // attacks: '',
 // wounds: '',
-// strengthBonus: '',
+export const strengthBonus = derived(strength, $strength => $strength > 9 ? Math.floor($strength / 10) : 0)
 export const toughnessBonus = derived(toughness, $toughness => $toughness > 9 ? Math.floor($toughness / 10) : 0)
 // movement: '',
 // magic: '',

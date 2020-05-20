@@ -1,6 +1,6 @@
 <script>
-  import NumberInput from './components/NumberInput.svelte'
-  import Input from './components/Input.svelte'
+    import NumberInput from './components/NumberInput.svelte'
+    import Input from './components/Input.svelte'
 
     const races = [
         {
@@ -23,7 +23,12 @@
 
     let selectedRace
 
-    import { toughness, toughnessBonus } from './stores.js'
+    import {
+        toughness,
+        toughnessBonus,
+        strength,
+        strengthBonus,
+    } from './stores.js'
 </script>
 
 <main>
@@ -60,6 +65,7 @@
             <fielset>
                 <legend>Iniciales</legend>
                 <NumberInput fieldName={'toughness'} label={'R'} bind:fieldValue={$toughness} />
+                <NumberInput fieldName={'strength'} label={'F'} bind:fieldValue={$strength} />
 
             </fielset>
         </fielset>
@@ -67,6 +73,7 @@
         <fielset>
             <legend>Secundarias</legend>
             <NumberInput fieldName={'toughnessBonus'} label={'BR'} fieldValue={$toughnessBonus} />
+            <NumberInput fieldName={'strengthBonus'} label={'BF'} fieldValue={$strengthBonus} />
         </fielset>
     </fieldset>
 </main>
