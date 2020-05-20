@@ -2,32 +2,26 @@
     import NumberInput from './components/NumberInput.svelte'
     import Input from './components/Input.svelte'
 
-    const races = [
-        {
-            id: 1,
-            text: 'Elfo'
-        },
-        {
-            id: 2,
-            text: 'Enano'
-        },
-        {
-            id: 3,
-            text: 'Halfling'
-        },
-        {
-            id: 4,
-            text: 'Humano'
-        },
-    ]
-
     let selectedRace
 
     import {
-        toughness,
-        toughnessBonus,
+        weaponSkill,
+        ballisticSkill,
         strength,
+        toughness,
+        agility,
+        intelligence,
+        willPower,
+        fellowship,
+        attacks,
+        wounds,
+        toughnessBonus,
         strengthBonus,
+        movement,
+        magic,
+        insanityPoints,
+        fatePoints,
+        races,
     } from './stores.js'
 </script>
 
@@ -64,16 +58,27 @@
 
             <fielset>
                 <legend>Iniciales</legend>
-                <NumberInput fieldName={'toughness'} label={'R'} bind:fieldValue={$toughness} />
+                <NumberInput fieldName={'weaponSkill'} label={'HA'} bind:fieldValue={$weaponSkill} />
+                <NumberInput fieldName={'ballisticSkill'} label={'HP'} bind:fieldValue={$ballisticSkill} />
                 <NumberInput fieldName={'strength'} label={'F'} bind:fieldValue={$strength} />
-
+                <NumberInput fieldName={'toughness'} label={'R'} bind:fieldValue={$toughness} />
+                <NumberInput fieldName={'agility'} label={'Ag'} bind:fieldValue={$agility} />
+                <NumberInput fieldName={'intelligence'} label={'I'} bind:fieldValue={$intelligence} />
+                <NumberInput fieldName={'willPower'} label={'V'} bind:fieldValue={$willPower} />
+                <NumberInput fieldName={'fellowship'} label={'Em'} bind:fieldValue={$fellowship} />
             </fielset>
         </fielset>
 
         <fielset>
             <legend>Secundarias</legend>
-            <NumberInput fieldName={'toughnessBonus'} label={'BR'} fieldValue={$toughnessBonus} />
+            <NumberInput fieldName={'attacks'} label={'A'} fieldValue={$attacks} />
+            <NumberInput fieldName={'wounds'} label={'H'} fieldValue={$wounds} />
             <NumberInput fieldName={'strengthBonus'} label={'BF'} fieldValue={$strengthBonus} />
+            <NumberInput fieldName={'toughnessBonus'} label={'BR'} fieldValue={$toughnessBonus} />
+            <NumberInput fieldName={'movement'} label={'M'} fieldValue={$movement} />
+            <NumberInput fieldName={'magic'} label={'Mag'} fieldValue={$magic} />
+            <NumberInput fieldName={'instanityPoints'} label={'PL'} fieldValue={$insanityPoints} />
+            <NumberInput fieldName={'fatePoints'} label={'PD'} fieldValue={$fatePoints} />
         </fielset>
     </fieldset>
 </main>
